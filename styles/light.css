@@ -1,20 +1,14 @@
 .page.theme_light {
+  --main-bg-color: #fff1f7;
+  --main-bg-img: url(../images/cover-image-light.png);
   --main-text-color: #353430;
   --title-text-color: #ffc2e6;
-  --title-shadow: #ff0070;
-  --brackets-сolor: #353430;
-  --title-decor: #ff8dcb;
-  --hover-color: 1px solid rgba(50, 49, 45, 0.4);
-  --background-color: #fff1f7;
-  --background-image: url(../images/cover-image-light.png);
-  --article-title-color: var(--main-text-color);
-  --section-title-color: var(--main-text-color);
-  --border-color: var(--title-shadow);
-  --corners-color: var(--main-text-color);
-  --link-shadow: var(--title-color);
-  --rec-color: var(--background-color);
+  --content-title-color: #353430;
   --main-accent-color: #ff8dcb;
   --accent-contrast-text-color: #353430;
+  --brackets-сolor: #353430;
+  --button-color: #353430;
+  --button-hover-color: rgba(50, 49, 45, 0.4);
 }
 
 .theme_light .header__decor {
@@ -23,18 +17,31 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --main-bg-color: #fff1f7;
+    --main-bg-img: url(../images/cover-image-light.png);
     --main-text-color: #353430;
-    --title-color: #ffc2e6;
-    --title-shadow: #ff0070;
-    --title-decor: #ff8dcb;
-    --hover-color: 1px solid rgba(50, 49, 45, 0.4);
-    --background-color: #fff1f7;
-    --background-image: url(../images/cover-image-light.png);
-    --article-title-color: var(--main-text-color);
-    --section-title-color: var(--main-text-color);
-    --border-color: var(--title-shadow);
-    --corners-color: var(--main-text-color);
-    --link-shadow: var(--title-color);
-    --rec-color: var(--background-color);
+    --title-text-color: #ffc2e6;
+    --content-title-color: #353430;
+    --main-accent-color: #ff8dcb;
+    --accent-contrast-text-color: #353430;
+    --brackets-сolor: #353430;
+    --button-color: #353430;
+    --button-hover-color: rgba(50, 49, 45, 0.4);
+  }
+
+  .header__decor {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) and (width < 1024px) {
+  :root {
+    --title-shadow-color: #ff8dcb;
+  }
+}
+
+@media (width < 1024px) {
+  .page.theme_light {
+    --title-shadow-color: #ff8dcb;
   }
 }
